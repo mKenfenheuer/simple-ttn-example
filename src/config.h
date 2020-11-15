@@ -7,14 +7,17 @@
 // -----------------------------------------------------------------------------
 // Global Config
 // -----------------------------------------------------------------------------
-#define SEND_INTERVAL_MS 3000
+#define SEND_INTERVAL_MS 30000
 
 
 // -----------------------------------------------------------------------------
 // Debug
 // -----------------------------------------------------------------------------
 #define DEBUG_PORT Serial
-#define TTN_DEBUG
+
+//uncomment if you want to see ttn debug information.
+//#define TTN_DEBUG
+
 #ifdef DEBUG_PORT
 #define DEBUG_MSG(...) DEBUG_PORT.printf((String(millis() / 1000.0) + ": " + __VA_ARGS__).c_str())
 #else
